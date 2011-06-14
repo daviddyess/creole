@@ -125,7 +125,7 @@ abstract class ResultSetCommon {
      */
     public function getIterator()
     {
-        include_once('creole/ResultSetIterator');//require_once 'lib/creole/ResultSetIterator.php';
+        include_once('creole/ResultSetIterator.php');//require_once 'lib/creole/ResultSetIterator.php';
         return new ResultSetIterator($this);
     }
 
@@ -323,7 +323,7 @@ abstract class ResultSetCommon {
         $idx = (is_int($column) ? $column - 1 : $column);
         if (!array_key_exists($idx, $this->fields)) { throw new SQLException("Invalid resultset column: " . $column); }
         if ($this->fields[$idx] === null) { return null; }
-        include_once('creole/util/Blob');//require_once 'creole/util/Blob.php';
+        include_once('creole/util/Blob.php');//require_once 'creole/util/Blob.php';
         $b = new Blob();
         $b->setContents($this->fields[$idx]);
         return $b;
@@ -337,7 +337,7 @@ abstract class ResultSetCommon {
         $idx = (is_int($column) ? $column - 1 : $column);
         if (!array_key_exists($idx, $this->fields)) { throw new SQLException("Invalid resultset column: " . $column); }
         if ($this->fields[$idx] === null) { return null; }
-        include_once('creole/util/Clob');//require_once 'creole/util/Clob.php';
+        include_once('creole/util/Clob.php');//require_once 'creole/util/Clob.php';
         $c = new Clob();
         $c->setContents($this->fields[$idx]);
         return $c;

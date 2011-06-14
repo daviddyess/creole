@@ -19,8 +19,8 @@
  * <http://creole.phpdb.org>.
  */
 
-include_once('creole/SQLException');//include_once 'lib/creole/SQLException.php';
-include_once('creole/Connection');;//include_once 'lib/creole/Connection.php';
+include_once('creole/SQLException.php');//include_once 'lib/creole/SQLException.php';
+include_once('creole/Connection.php');;//include_once 'lib/creole/Connection.php';
 
 // static:
 // track errors is used by drivers to get better error messages
@@ -289,6 +289,8 @@ class Creole {
             return $dsn;
         }
 
+        $dsn = str_replace(':@', '@', $dsn);
+
         $parsed = array(
             'phptype'  => null,
             'username' => null,
@@ -372,7 +374,7 @@ class Creole {
     public static function import($class) {
         if (!class_exists($class, false)) {
             $path = strtr($class, '.', DIRECTORY_SEPARATOR) . '.php';
-            $ret = include_once('api'. DIRECTORY_SEPARATOR . $path);
+            $ret = include_once($path);
             if ($ret === false) {
                 throw new SQLException("Unable to load driver class: " . $class);
             }

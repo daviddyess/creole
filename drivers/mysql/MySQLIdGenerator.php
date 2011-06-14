@@ -1,6 +1,6 @@
 <?php
 
-include_once('creole/IdGenerator');//require_once 'lib/creole/IdGenerator.php';
+include_once('creole/IdGenerator.php');//require_once 'lib/creole/IdGenerator.php';
 
 /**
  * MySQL IdGenerator implimenation.

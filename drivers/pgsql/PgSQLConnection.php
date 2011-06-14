@@ -19,9 +19,9 @@
  * <http://creole.phpdb.org>.
  */
 
-include_once('creole/Connection');//require_once 'creole/Connection.php';
-include_once('creole/common/ConnectionCommon');//require_once 'creole/common/ConnectionCommon.php';
-include_once('creole/drivers/pgsql/PgSQLResultSet');//include_once 'creole/drivers/pgsql/PgSQLResultSet.php';
+include_once('creole/Connection.php');//require_once 'creole/Connection.php';
+include_once('creole/common/ConnectionCommon.php');//require_once 'creole/common/ConnectionCommon.php';
+include_once('creole/drivers/pgsql/PgSQLResultSet.php');//include_once 'creole/drivers/pgsql/PgSQLResultSet.php';
 
 /**
  * PgSQL implementation of Connection.

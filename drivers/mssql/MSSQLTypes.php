@@ -20,7 +20,7 @@
  * <http://creole.phpdb.org>.
  */
 
-include_once('creole/CreoleTypes');//require_once 'creole/CreoleTypes.php';
+include_once('creole/CreoleTypes.php');//require_once 'creole/CreoleTypes.php';
 
 /**
  * MSSQL types / type map.

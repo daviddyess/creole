@@ -35,8 +35,8 @@ class ODBCTableInfo extends TableInfo {
      */
     protected function initColumns()
     {
-        include_once('creole/metadata/ColumnInfo');//include_once 'creole/metadata/ColumnInfo.php';
-        include_once('creole/drivers/odbc/ODBCTypes');//include_once 'creole/drivers/odbc/ODBCTypes.php';
+        include_once('creole/metadata/ColumnInfo.php');//include_once 'creole/metadata/ColumnInfo.php';
+        include_once('creole/drivers/odbc/ODBCTypes.php');//include_once 'creole/drivers/odbc/ODBCTypes.php';
 
         ODBCTypes::loadTypeMap($this->conn);
 
@@ -67,7 +67,7 @@ class ODBCTableInfo extends TableInfo {
      */
     protected function initPrimaryKey()
     {
-        include_once('creole/metadata/PrimaryKeyInfo');//include_once 'creole/metadata/PrimaryKeyInfo.php';
+        include_once('creole/metadata/PrimaryKeyInfo.php');//include_once 'creole/metadata/PrimaryKeyInfo.php';
 
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();

@@ -19,7 +19,7 @@
  * <http://creole.phpdb.org>.
  */
 
-include_once('creole/metadata.TableInfo');//require_once 'creole/metadata/TableInfo.php';
+include_once('creole/metadata.TableInfo.php');//require_once 'creole/metadata/TableInfo.php';
 
 /**
  * MySQL implementation of TableInfo.
@@ -33,8 +33,8 @@ class MySQLTableInfo extends TableInfo {
     /** Loads the columns for this table. */
     protected function initColumns()
     {
-        include_once('creole/metadata/ColumnInfo');//include_once 'creole/metadata/ColumnInfo.php';
-        include_once('creole/drivers/mysql/MySQLTypes');//include_once 'creole/drivers/mysql/MySQLTypes.php';
+        include_once('creole/metadata/ColumnInfo.php');//include_once 'creole/metadata/ColumnInfo.php';
+        include_once('creole/drivers/mysql/MySQLTypes.php');//include_once 'creole/drivers/mysql/MySQLTypes.php';
 
         if (!@mysql_select_db($this->dbname, $this->conn->getResource())) {
             throw new SQLException('No database selected');
@@ -98,7 +98,7 @@ class MySQLTableInfo extends TableInfo {
     /** Loads the primary key information for this table. */
     protected function initPrimaryKey()
     {
-        include_once('creole/metadata/PrimaryKeyInfo');//include_once 'creole/metadata/PrimaryKeyInfo.php';
+        include_once('creole/metadata/PrimaryKeyInfo.php');//include_once 'creole/metadata/PrimaryKeyInfo.php';
 
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();
@@ -131,7 +131,7 @@ class MySQLTableInfo extends TableInfo {
     /** Loads the indexes for this table. */
     protected function initIndexes() {
 
-        include_once('creole/metadata/IndexInfo');//include_once 'creole/metadata/IndexInfo.php';
+        include_once('creole/metadata/IndexInfo.php');//include_once 'creole/metadata/IndexInfo.php';
 
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();
@@ -181,7 +181,7 @@ class MySQLTableInfo extends TableInfo {
        return;
     }
 
-    include_once('creole/metadata/ForeignKeyInfo');//include_once 'creole/metadata/ForeignKeyInfo.php';
+    include_once('creole/metadata/ForeignKeyInfo.php');//include_once 'creole/metadata/ForeignKeyInfo.php';
 
     // columns have to be loaded first
     if (!$this->colsLoaded) $this->initColumns();

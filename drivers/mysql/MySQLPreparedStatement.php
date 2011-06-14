@@ -19,8 +19,8 @@
  * <http://creole.phpdb.org>.
  */
 
-include_once('creole/PreparedStatement');//require_once 'lib/creole/PreparedStatement.php';
-include_once('creole/common/PreparedStatementCommon');//require_once 'lib/creole/common/PreparedStatementCommon.php';
+include_once('creole/PreparedStatement.php');//require_once 'lib/creole/PreparedStatement.php';
+include_once('creole/common/PreparedStatementCommon.php');//require_once 'lib/creole/common/PreparedStatementCommon.php';
 
 /**
  * MySQL subclass for prepared statements.

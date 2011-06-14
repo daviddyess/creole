@@ -20,9 +20,9 @@
  * <http://creole.phpdb.org>.
  */
 
-include_once('creole/Connection');//require_once 'creole/Connection.php';
-include_once('creole/common/ConnectionCommon');//require_once 'creole/common/ConnectionCommon.php';
-include_once('creole/drivers/oracle/OCI8ResultSet');//include_once 'creole/drivers/oracle/OCI8ResultSet.php';
+include_once('creole/Connection.php');//require_once 'creole/Connection.php';
+include_once('creole/common/ConnectionCommon.php');//require_once 'creole/common/ConnectionCommon.php';
+include_once('creole/drivers/oracle/OCI8ResultSet.php');//include_once 'creole/drivers/oracle/OCI8ResultSet.php';
 
 /**
  * Oracle implementation of Connection.

@@ -19,9 +19,9 @@
  * <http://creole.phpdb.org>.
  */
 
-include_once('creole/Connection');//require_once 'lib/creole/Connection.php';
-include_once('creole/common/ConnectionCommon');//require_once 'lib/creole/common/ConnectionCommon.php';
-include_once('creole/drivers/mysql/MySQLResultSet');//include_once 'lib/creole/drivers/mysql/MySQLResultSet.php';
+include_once('creole/Connection.php');//require_once 'lib/creole/Connection.php';
+include_once('creole/common/ConnectionCommon.php');//require_once 'lib/creole/common/ConnectionCommon.php';
+include_once('creole/drivers/mysql/MySQLResultSet.php');//include_once 'lib/creole/drivers/mysql/MySQLResultSet.php';
 
 /**
  * MySQL implementation of Connection.
@@ -126,7 +126,7 @@ class MySQLConnection extends ConnectionCommon implements Connection {
      */
     public function getDatabaseInfo()
     {
-        include_once('creole/drivers/mysql/metadata/MySQLDatabaseInfo');//require_once 'lib/creole/drivers/mysql/metadata/MySQLDatabaseInfo.php';
+        include_once('creole/drivers/mysql/metadata/MySQLDatabaseInfo.php');//require_once 'lib/creole/drivers/mysql/metadata/MySQLDatabaseInfo.php';
         return new MySQLDatabaseInfo($this);
     }
 
@@ -135,7 +135,7 @@ class MySQLConnection extends ConnectionCommon implements Connection {
      */
     public function getIdGenerator()
     {
-        include_once('creole/drivers/mysql/MySQLIdGenerator');//require_once 'lib/creole/drivers/mysql/MySQLIdGenerator.php';
+        include_once('creole/drivers/mysql/MySQLIdGenerator.php');//require_once 'lib/creole/drivers/mysql/MySQLIdGenerator.php';
         return new MySQLIdGenerator($this);
     }
 
@@ -144,7 +144,7 @@ class MySQLConnection extends ConnectionCommon implements Connection {
      */
     public function prepareStatement($sql)
     {
-        include_once('creole/drivers/mysql/MySQLPreparedStatement');//require_once 'MySQLPreparedStatement.php';
+        include_once('creole/drivers/mysql/MySQLPreparedStatement.php');//require_once 'MySQLPreparedStatement.php';
         return new MySQLPreparedStatement($this, $sql);
     }
 
@@ -160,7 +160,7 @@ class MySQLConnection extends ConnectionCommon implements Connection {
      */
     public function createStatement()
     {
-        include_once('creole/drivers/mysql/MySQLStatement');//require_once 'lib/creole/drivers/mysql/MySQLStatement.php';
+        include_once('creole/drivers/mysql/MySQLStatement.php');//require_once 'lib/creole/drivers/mysql/MySQLStatement.php';
         return new MySQLStatement($this);
     }
 

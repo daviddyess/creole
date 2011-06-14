@@ -19,8 +19,8 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/SQLException');//include_once 'lib/creole/SQLException.php';
-\clay\lib('creole/Connection');;//include_once 'lib/creole/Connection.php';
+include_once('creole/SQLException');//include_once 'lib/creole/SQLException.php';
+include_once('creole/Connection');;//include_once 'lib/creole/Connection.php';
 
 // static:
 // track errors is used by drivers to get better error messages

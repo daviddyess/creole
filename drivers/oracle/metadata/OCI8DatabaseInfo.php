@@ -57,7 +57,7 @@ class OCI8DatabaseInfo extends DatabaseInfo {
      */
     protected function initTables()
     {
-        \clay\lib('creole/drivers/oracke/metadata/OCI8TableInfo');//include_once 'creole/drivers/oracle/metadata/OCI8TableInfo.php';
+        include_once('creole/drivers/oracke/metadata/OCI8TableInfo');//include_once 'creole/drivers/oracle/metadata/OCI8TableInfo.php';
 
         $sql = "SELECT table_name
             FROM all_tables

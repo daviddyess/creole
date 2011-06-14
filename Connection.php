@@ -19,7 +19,7 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/ResultSet');//include_once 'lib/creole/ResultSet.php'; // we need this for the fetchmode ResultSet flags (constants) that are passed to executeQuery()
+include_once('creole/ResultSet');//include_once 'lib/creole/ResultSet.php'; // we need this for the fetchmode ResultSet flags (constants) that are passed to executeQuery()
 
 /**
  * Connection is an abstract base class for DB dialect implementations, and must be

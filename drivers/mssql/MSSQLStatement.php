@@ -19,8 +19,8 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/common/StatementCommon');//require_once 'creole/common/StatementCommon.php';
-\clay\lib('creole/Statement');//require_once 'creole/Statement.php';
+include_once('creole/common/StatementCommon');//require_once 'creole/common/StatementCommon.php';
+include_once('creole/Statement');//require_once 'creole/Statement.php';
 
 /**
  * Class that contains MSSQL functionality for Statements.

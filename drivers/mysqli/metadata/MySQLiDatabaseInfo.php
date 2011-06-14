@@ -35,7 +35,7 @@ class MySQLiDatabaseInfo extends DatabaseInfo {
      */
     protected function initTables()
     {
-        \clay\lib('creole/drivers/mysqli/metadata/MySQLiTableInfo');//include_once 'creole/drivers/mysqli/metadata/MySQLiTableInfo.php';
+        include_once('creole/drivers/mysqli/metadata/MySQLiTableInfo');//include_once 'creole/drivers/mysqli/metadata/MySQLiTableInfo.php';
 
         $result = @mysqli_query($this->conn->getResource(), 'SHOW TABLES FROM ' . $this->dbname);
 

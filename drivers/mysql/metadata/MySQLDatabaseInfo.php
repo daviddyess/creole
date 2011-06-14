@@ -19,7 +19,7 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/metadata/DatabaseInfo');//require_once 'creole/metadata/DatabaseInfo.php';
+include_once('creole/metadata/DatabaseInfo');//require_once 'creole/metadata/DatabaseInfo.php';
 
 /**
  * MySQL implementation of DatabaseInfo.
@@ -36,7 +36,7 @@ class MySQLDatabaseInfo extends DatabaseInfo {
      */
     protected function initTables()
     {
-        \clay\lib('creole/drivers.mysql.metadata.MySQLTableInfo');//include_once 'creole/drivers/mysql/metadata/MySQLTableInfo.php';
+        include_once('creole/drivers.mysql.metadata.MySQLTableInfo');//include_once 'creole/drivers/mysql/metadata/MySQLTableInfo.php';
 																		// using $this->dblink was causing tests to break
 																		// perhaps dblink is changed by another test ... ?
         $result = @mysql_query("SHOW TABLES FROM `" . $this->dbname . "`", $this->conn->getResource());

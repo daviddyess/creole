@@ -19,7 +19,7 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/metadata/TableInfo');//require_once 'creole/metadata/TableInfo.php';
+include_once('creole/metadata/TableInfo');//require_once 'creole/metadata/TableInfo.php';
 
 /**
  * MySQL implementation of TableInfo.
@@ -34,9 +34,9 @@ class SQLiteTableInfo extends TableInfo {
     protected function initColumns()
     {
 
-        \clay\lib('creole/metadata/ColumnInfo');//include_once 'creole/metadata/ColumnInfo.php';
-        \clay\lib('creole/metadata/PrimaryKeyInfo');//include_once 'creole/metadata/PrimaryKeyInfo.php';
-        \clay\lib('creole/drivers/sqlite/SQLiteTypes');//include_once 'creole/drivers/sqlite/SQLiteTypes.php';
+        include_once('creole/metadata/ColumnInfo');//include_once 'creole/metadata/ColumnInfo.php';
+        include_once('creole/metadata/PrimaryKeyInfo');//include_once 'creole/metadata/PrimaryKeyInfo.php';
+        include_once('creole/drivers/sqlite/SQLiteTypes');//include_once 'creole/drivers/sqlite/SQLiteTypes.php';
 
         // To get all of the attributes we need, we'll actually do
         // two separate queries.  The first gets names and default values
@@ -98,7 +98,7 @@ class SQLiteTableInfo extends TableInfo {
     /** Loads the indexes for this table. */
     protected function initIndexes() {
 
-        \clay\lib('creole/metadata/IndexInfo');//include_once 'creole/metadata/IndexInfo.php';
+        include_once('creole/metadata/IndexInfo');//include_once 'creole/metadata/IndexInfo.php';
 
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();

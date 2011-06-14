@@ -19,7 +19,7 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/metadata/DatabaseInfo');//require_once 'creole/metadata/DatabaseInfo.php';
+include_once('creole/metadata/DatabaseInfo');//require_once 'creole/metadata/DatabaseInfo.php';
 
 /**
  * SQLite implementation of DatabaseInfo.

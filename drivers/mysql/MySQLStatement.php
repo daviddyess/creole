@@ -19,8 +19,8 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/Statement');//require_once 'lib/creole/Statement.php';
-\clay\lib('creole/StatementCommon');//require_once 'lib/creole/common/StatementCommon.php';
+include_once('creole/Statement');//require_once 'lib/creole/Statement.php';
+include_once('creole/StatementCommon');//require_once 'lib/creole/common/StatementCommon.php';
 
 /**
  * MySQL Statement

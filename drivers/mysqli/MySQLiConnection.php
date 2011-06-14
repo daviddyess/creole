@@ -19,9 +19,9 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/Connection');//require_once 'creole/Connection.php';
-\clay\lib('creole/common/ConnectionCommon');//require_once 'creole/common/ConnectionCommon.php';
-\clay\lib('creole/drivers/mysqli/MySQLiResultSet');//include_once 'creole/drivers/mysqli/MySQLiResultSet.php';
+include_once('creole/Connection');//require_once 'creole/Connection.php';
+include_once('creole/common/ConnectionCommon');//require_once 'creole/common/ConnectionCommon.php';
+include_once('creole/drivers/mysqli/MySQLiResultSet');//include_once 'creole/drivers/mysqli/MySQLiResultSet.php';
 
 /**
  * MySQLi implementation of Connection.

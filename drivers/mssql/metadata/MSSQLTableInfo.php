@@ -19,8 +19,8 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/CreoleTypes');//require_once 'creole/CreoleTypes.php';
-\clay\lib('creole/metadata/TableInfo');//require_once 'creole/metadata/TableInfo.php';
+include_once('creole/CreoleTypes');//require_once 'creole/CreoleTypes.php';
+include_once('creole/metadata/TableInfo');//require_once 'creole/metadata/TableInfo.php';
 
 /**
  * MSSQL implementation of TableInfo.
@@ -37,8 +37,8 @@ class MSSQLTableInfo extends TableInfo {
      */
     protected function initColumns()
     {
-        \clay\lib('creole/metadata/ColumnInfo');//include_once 'creole/metadata/ColumnInfo.php';
-        \clay\lib('creole/drivers/mssql/MSSQLTypes');//include_once 'creole/drivers/mssql/MSSQLTypes.php';
+        include_once('creole/metadata/ColumnInfo');//include_once 'creole/metadata/ColumnInfo.php';
+        include_once('creole/drivers/mssql/MSSQLTypes');//include_once 'creole/drivers/mssql/MSSQLTypes.php';
 
         if (!@mssql_select_db($this->dbname, $this->conn->getResource())) {
             throw new SQLException('No database selected');
@@ -75,7 +75,7 @@ class MSSQLTableInfo extends TableInfo {
     {
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();
-        \clay\lib('creole/metadata/IndexInfo');//include_once 'creole/metadata/IndexInfo.php';
+        include_once('creole/metadata/IndexInfo');//include_once 'creole/metadata/IndexInfo.php';
 
         if (!@mssql_select_db($this->dbname, $this->conn->getResource())) {
             throw new SQLException('No database selected');
@@ -154,7 +154,7 @@ class MSSQLTableInfo extends TableInfo {
     {
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();
-        \clay\lib('creole/metadata/PrimaryKeyInfo');//include_once 'creole/metadata/PrimaryKeyInfo.php';
+        include_once('creole/metadata/PrimaryKeyInfo');//include_once 'creole/metadata/PrimaryKeyInfo.php';
 
         if (!@mssql_select_db($this->dbname, $this->conn->getResource())) {
             throw new SQLException('No database selected');

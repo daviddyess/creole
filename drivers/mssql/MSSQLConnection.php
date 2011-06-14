@@ -21,9 +21,9 @@
  */
 
 
-\clay\lib('creole/Connection');//equire_once 'creole/Connection.php';
-\clay\lib('creole/common/ConnectionCommon');//require_once 'creole/common/ConnectionCommon.php';
-\clay\lib('creole/drivers/mssql/MSSQLResultSet');//include_once 'creole/drivers/mssql/MSSQLResultSet.php';
+include_once('creole/Connection');//equire_once 'creole/Connection.php';
+include_once('creole/common/ConnectionCommon');//require_once 'creole/common/ConnectionCommon.php';
+include_once('creole/drivers/mssql/MSSQLResultSet');//include_once 'creole/drivers/mssql/MSSQLResultSet.php';
 
 /**
  * MS SQL Server implementation of Connection.
@@ -110,7 +110,7 @@ class MSSQLConnection extends ConnectionCommon implements Connection {
      */
     public function getDatabaseInfo()
     {
-        \clay\lib('creole/drivers/mssql/metadata/MSSQLDatabaseInfo');//require_once 'creole/drivers/mssql/metadata/MSSQLDatabaseInfo.php';
+        include_once('creole/drivers/mssql/metadata/MSSQLDatabaseInfo');//require_once 'creole/drivers/mssql/metadata/MSSQLDatabaseInfo.php';
         return new MSSQLDatabaseInfo($this);
     }
 
@@ -119,7 +119,7 @@ class MSSQLConnection extends ConnectionCommon implements Connection {
      */
     public function getIdGenerator()
     {
-        \clay\lib('creole/drivers/mssql/MSSQLIdGenerator');//require_once 'creole/drivers/mssql/MSSQLIdGenerator.php';
+        include_once('creole/drivers/mssql/MSSQLIdGenerator');//require_once 'creole/drivers/mssql/MSSQLIdGenerator.php';
         return new MSSQLIdGenerator($this);
     }
 
@@ -128,7 +128,7 @@ class MSSQLConnection extends ConnectionCommon implements Connection {
      */
     public function prepareStatement($sql)
     {
-        \clay\lib('creole/drivers/mssql/MSSQLPreparedStatement');//require_once 'creole/drivers/mssql/MSSQLPreparedStatement.php';
+        include_once('creole/drivers/mssql/MSSQLPreparedStatement');//require_once 'creole/drivers/mssql/MSSQLPreparedStatement.php';
         return new MSSQLPreparedStatement($this, $sql);
     }
 
@@ -137,7 +137,7 @@ class MSSQLConnection extends ConnectionCommon implements Connection {
      */
     public function createStatement()
     {
-        \clay\lib('creole/drivers/mssql/MSSQLStatement');//require_once 'creole/drivers/mssql/MSSQLStatement.php';
+        include_once('creole/drivers/mssql/MSSQLStatement');//require_once 'creole/drivers/mssql/MSSQLStatement.php';
         return new MSSQLStatement($this);
     }
 
@@ -273,7 +273,7 @@ class MSSQLConnection extends ConnectionCommon implements Connection {
      */
     function prepareCall($sql)
     {
-        \clay\lib('creole/drivers/mssql/MSSQLCallableStatement');//require_once 'creole/drivers/mssql/MSSQLCallableStatement.php';
+        include_once('creole/drivers/mssql/MSSQLCallableStatement');//require_once 'creole/drivers/mssql/MSSQLCallableStatement.php';
         $stmt = mssql_init($sql);
         if (!$stmt) {
             throw new SQLException('Unable to prepare statement', mssql_get_last_message(), $sql);

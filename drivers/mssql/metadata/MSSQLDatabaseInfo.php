@@ -19,7 +19,7 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/metadata/DatabaseInfo');//require_once 'creole/metadata/DatabaseInfo.php';
+include_once('creole/metadata/DatabaseInfo');//require_once 'creole/metadata/DatabaseInfo.php';
 
 /**
  * MSSQL impementation of DatabaseInfo.
@@ -36,7 +36,7 @@ class MSSQLDatabaseInfo extends DatabaseInfo {
      */
     protected function initTables()
     {
-        \clay\lib('creole/drivers/mssql/metadata/MSSQLTableInfo');//include_once 'creole/drivers/mssql/metadata/MSSQLTableInfo.php';
+        include_once('creole/drivers/mssql/metadata/MSSQLTableInfo');//include_once 'creole/drivers/mssql/metadata/MSSQLTableInfo.php';
 
         $dsn = $this->conn->getDSN();
 

@@ -38,7 +38,7 @@ class ODBCDatabaseInfo extends DatabaseInfo {
      */
     protected function initTables()
     {
-        \clay\lib('creole/drivers/odbc/metadata/ODBCTableInfo');//include_once 'creole/drivers/odbc/metadata/ODBCTableInfo.php';
+        include_once('creole/drivers/odbc/metadata/ODBCTableInfo');//include_once 'creole/drivers/odbc/metadata/ODBCTableInfo.php';
 
         $result = @odbc_tables($this->conn->getResource());
 

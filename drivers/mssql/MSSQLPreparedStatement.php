@@ -19,8 +19,8 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/PreparedStatement');//require_once 'creole/PreparedStatement.php';
-\clay\lib('creole/common/PreparedStatementCommon');//require_once 'creole/common/PreparedStatementCommon.php';
+include_once('creole/PreparedStatement');//require_once 'creole/PreparedStatement.php';
+include_once('creole/common/PreparedStatementCommon');//require_once 'creole/common/PreparedStatementCommon.php';
 
 /**
  * MSSQL specific PreparedStatement functions.

@@ -19,7 +19,7 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/metadata/TableInfo');//require_once 'creole/metadata/TableInfo.php';
+include_once('creole/metadata/TableInfo');//require_once 'creole/metadata/TableInfo.php';
 
 /**
  * Oracle (OCI8) implementation of TableInfo.
@@ -44,8 +44,8 @@ class OCI8TableInfo extends TableInfo {
     protected function initColumns()
     {
 
-        \clay\lib('creole/metadata/ColumnInfo');//include_once 'creole/metadata/ColumnInfo.php';
-        \clay\lib('creole/drivers/oracle/OCI8Types');//include_once 'creole/drivers/oracle/OCI8Types.php';
+        include_once('creole/metadata/ColumnInfo');//include_once 'creole/metadata/ColumnInfo.php';
+        include_once('creole/drivers/oracle/OCI8Types');//include_once 'creole/drivers/oracle/OCI8Types.php';
 
 
         // To get all of the attributes we need, we'll actually do
@@ -91,7 +91,7 @@ class OCI8TableInfo extends TableInfo {
     /** Loads the primary key information for this table. */
     protected function initPrimaryKey()
     {
-        \clay\lib('creole/metadata/PrimaryKeyInfo');//include_once 'creole/metadata/PrimaryKeyInfo.php';
+        include_once('creole/metadata/PrimaryKeyInfo');//include_once 'creole/metadata/PrimaryKeyInfo.php';
 
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();
@@ -132,7 +132,7 @@ class OCI8TableInfo extends TableInfo {
     /** Loads the indexes for this table. */
     protected function initIndexes() {
 
-        \clay\lib('creole/metadata/IndexInfo');//include_once 'creole/metadata/IndexInfo.php';
+        include_once('creole/metadata/IndexInfo');//include_once 'creole/metadata/IndexInfo.php';
 
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();
@@ -186,7 +186,7 @@ class OCI8TableInfo extends TableInfo {
     /** Load foreign keys */
     protected function initForeignKeys() {
 
-        \clay\lib('creole/metadata/ForeignKeyInfo');//include_once 'creole/metadata/ForeignKeyInfo.php';
+        include_once('creole/metadata/ForeignKeyInfo');//include_once 'creole/metadata/ForeignKeyInfo.php';
 
         // columns have to be loaded first
         if (!$this->colsLoaded) $this->initColumns();

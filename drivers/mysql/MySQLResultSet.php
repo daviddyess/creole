@@ -19,8 +19,8 @@
  * <http://creole.phpdb.org>.
  */
 
-\clay\lib('creole/ResultSet');//require_once 'lib/creole/ResultSet.php';
-\clay\lib('creole/common/ResultSetCommon');//require_once 'lib/creole/common/ResultSetCommon.php';
+include_once('creole/ResultSet');//require_once 'lib/creole/ResultSet.php';
+include_once('creole/common/ResultSetCommon');//require_once 'lib/creole/common/ResultSetCommon.php';
 
 /**
  * MySQL implementation of ResultSet class.
